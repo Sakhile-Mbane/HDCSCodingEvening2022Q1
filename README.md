@@ -1,7 +1,7 @@
 # HDCSCodingEvening2022Q1
 HyperionDev Codenight
 
-#STAGE1 - encrytion.
+# Stage 1 - encrytion.
 
 morse_map = {'A':'.-','B':'-...','C':'-.-.','D' : '-..', 'E':'.','F':'..-.','G':'--.', 'H':'....',
                     'I':'..', 'J':'.---', 'K':'-.-',
@@ -9,8 +9,17 @@ morse_map = {'A':'.-','B':'-...','C':'-.-.','D' : '-..', 'E':'.','F':'..-.','G':
                     'O':'---', 'P':'.--.', 'Q':'--.-',
                     'R':'.-.', 'S':'...', 'T':'-',
                     'U':'..-', 'V':'...-', 'W':'.--',
-                    'X':'-..-', 'Y':'-.--', 'Z':'--..','-..-.':'/'}
-message = input('enter messageto encrypt in CAPITAL LETTERS: ')
+                    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+                    0:'-----',1:'.----',2:'..---', 3: '...--',
+                    4:'....-', 5:'.....', 6:'-....', 7:'--...',
+                    8:'---..',9:'----.', '.':'.-.-.-', ',':'--..--',
+                    '?' : '..--..', '\'':'.----.','!':'-.-.--', '/':'-..-.',
+                     '(': '-.--.',')':'-.--.-','&':'.-...',':':'---...',';':'-.-.-.',
+            '=': '-...-', '+': '.-.-.', '-':'-....-', '_':'..--.-','\"':'.-..-.','$': '...-..-', 
+            '@': '.--.-.','¿':'..-.-', '¡':'--...-'}
+
+message = input('enter message to encrypt in CAPITAL LETTERS: ').upper()
+
 def encrytion(message):
     ciphertext = ''
     for letter in message:
@@ -21,6 +30,7 @@ def encrytion(message):
     return ciphertext
 
 encrytion(message)
+
 
 def decryption(message):
     message += ' '
